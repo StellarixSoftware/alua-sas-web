@@ -1,0 +1,83 @@
+/* ============================================ 
+15. ESTILO COMPACTO Y ELEGANTE DEL FORMULARIO 
+============================================ */
+/* Reducción general del contenedor */
+.formulario-contacto {
+    padding: 25px 30px !important;
+    /* Más pequeño */
+    max-width: 100%;
+}
+
+.formulario-contacto h3 {
+    font-size: 1.4rem !important;
+    /* Título más discreto */
+    margin-bottom: 5px !important;
+    color: var(--azul-profundo);
+}
+
+.formulario-contacto p {
+    font-size: 0.9rem !important;
+    margin-bottom: 20px !important;
+    color: #666;
+}
+
+/* Campos Compactos */
+.form-grupo {
+    margin-bottom: 12px !important;
+    /* Menos espacio entre filas */
+}
+
+.form-grupo label {
+    font-size: 0.85rem !important;
+    /* Labels más pequeños */
+    margin-bottom: 4px !important;
+    color: var(--azul-profundo);
+    font-weight: 600;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    padding: 8px 12px !important;
+    /* Relleno reducido */
+    font-size: 0.9rem !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 4px !important;
+    height: auto !important;
+}
+
+/* Altura específica para selects e inputs de una línea */
+.form-grupo input,
+.form-grupo select {
+    height: 36px !important;
+}
+
+/* Textarea más pequeño */
+.form-grupo textarea {
+    height: 80px !important;
+    resize: none;
+}
+
+/* Botón de envío más elegante */
+.btn-enviar {
+    padding: 12px !important;
+    font-size: 1rem !important;
+    margin-top: 5px !important;
+    background: var(--azul-profundo) !important;
+    color: white !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-enviar:hover {
+    background: var(--dorado-elegante) !important;
+    transform: translateY(-2px);
+}
+
+/* Ajuste de Validaciones */
+.error-msg {
+    font-size: 0.75rem !important;
+    margin-top: 2px !important;
+    min-height: 15px !important;
+    /* Ocupa menos espacio */
+}

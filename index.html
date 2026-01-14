@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="GGnUJ6nPojt5-0DcDz_exZ4jD2VdCft6Z7s9l8OozR8" />
+    <title>Alua S.A.S. - Estructuras Arquitectónicas, Vidrios y Aluminio</title>
+    <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap">
+    <link rel="icon" type="image/x-icon" href="img/logo-icono.ico">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+    <!-- ============================================ 
+BOTÓN FLOTANTE DE WHATSAPP 
+============================================ -->
+    <a href="https://wa.me/573125870901?text=Hola,%20necesito%20cotizar%20un%20proyecto" class="whatsapp-btn"
+        target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">¿Cotizamos tu proyecto?</span>
+    </a>
+    <!-- ============================================ 
+HEADER / MENÚ DE NAVEGACIÓN 
+============================================ -->
+    <header class="header">
+        <div class="contenedor header-contenido">
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="imagenes/LogoAlua.jpeg" alt="Logo Alua S.A.S." id="logo-imagen">
+            </div>
+            <!-- MENÚ PRINCIPAL PARA ESCRITORIO -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- MENÚ HAMBURGUESA (SOLO PARA MÓVIL) -->
+            <div class="hamburger-container">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú de servicios">
+                    <span class="hamburger-icon">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </span>
+                    <span class="hamburger-label">Menú</span>
+                </button>
+            </div>
+        </div>
+        <!-- MENÚ DESPLEGABLE (FUERA DEL CONTENEDOR PARA MEJOR POSICIONAMIENTO) -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="menu-header">
+                <h3><i class="fas fa-gavel"></i> Nuestros Servicios</h3>
+                <p class="menu-subtitle">Áreas de especialización legal</p>
+            </div>
+            <ul class="menu-list">
+                <li>
+                    <a href="#servicios" class="menu-item" data-service="familia">
+                        <div class="menu-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Derecho de Familia</h4>
+                            <p>Separación, divorcio, custodia, alimentos</p>
+                        </div>
+                        <div class="menu-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#servicios" class="menu-item" data-service="laboral">
+                        <div class="menu-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Derecho Laboral</h4>
+                            <p>Asesoría empresarial, litigio laboral</p>
+                        </div>
+                        <div class="menu-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#servicios" class="menu-item" data-service="civil">
+                        <div class="menu-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Derecho Civil</h4>
+                            <p>Contratos, cobranza, inmobiliario</p>
+                        </div>
+                        <div class="menu-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#servicios" class="menu-item" data-service="corporativo">
+                        <div class="menu-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="menu-content">
+                            <h4>Derecho Corporativo</h4>
+                            <p>Constitución de sociedades, recuperación</p>
+                        </div>
+                        <div class="menu-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="menu-footer">
+                <a href="#contacto" class="menu-cta">
+                    <i class="fas fa-paper-plane"></i>
+                    Solicitar Consulta Personalizada
+                </a>
+            </div>
+        </div>
+        <!-- OVERLAY PARA CERRAR -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+    <!-- ============================================ 
+SECCIÓN INICIO / PORTADA CON CARRUSEL 
+============================================ -->
+    <section class="portada" id="inicio">
+        <!-- CARRUSEL DE IMÁGENES -->
+        <div class="carrusel">
+            <!-- IMAGEN 1 -->
+            <div class="slide activo">
+                <img src="imagenes/Portada 1.jpg" alt="Estructuras Arquitectónicas">
+            </div>
+            <!-- IMAGEN 2 -->
+            <div class="slide">
+                <img src="imagenes/Portada 2.jpeg" alt="Vidrios y Aluminio">
+            </div>
+            <!-- IMAGEN 3 -->
+            <div class="slide">
+                <img src="imagenes/Portada 3.jpeg" alt="Diseño Innovador">
+            </div>
+            <!-- CONTROLES DEL CARRUSEL -->
+            <button class="carrusel-btn prev" aria-label="Imagen anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carrusel-btn next" aria-label="Siguiente imagen">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <!-- INDICADORES -->
+            <div class="indicadores">
+                <span class="indicador activo" data-index="0"></span>
+                <span class="indicador" data-index="1"></span>
+                <span class="indicador" data-index="2"></span>
+            </div>
+        </div>
+        <!-- CAPA CON TEXTO SOBRE CARRUSEL -->
+        <div class="carrusel-capa">
+            <div class="contenedor">
+                <h2 class="titulo-portada">Estructuras Arquitectónicas, <br> Vidrios y Aluminio</h2>
+                <p class="texto-portada">
+                    "El éxito no está en vencer siempre, sino en no desanimarse nunca".
+                </p>
+                <div class="portada-botones">
+                    <a href="#servicios" class="btn">Ver Portafolio</a>
+                    <a href="#contacto" class="btn btn-contacto">Cotizar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================ 
+SECCIÓN NOSOTROS / INFORMACIÓN DEL BUFETE 
+============================================ -->
+    <section class="nosotros" id="nosotros">
+        <div class="contenedor">
+            <p class="subtitulo">Filosofía Empresarial</p>
+            <h2 class="titulo-seccion">ALUA S.A.S.</h2>
+            <div class="nosotros-contenido">
+                <!-- INFORMACIÓN PRINCIPAL -->
+                <div class="nosotros-info">
+                    <h3>Presentación Corporativa</h3>
+                    <p>
+                        Somos una microempresa con más de 17 años de experiencia en el sector de la
+                        estructura arquitectónica liviana. Contamos con 7 años de trayectoria sólida en
+                        el mercado, respaldados por un equipo humano calificado en las áreas de
+                        arquitectura, diseño y administración.
+                    </p>
+                    <p>
+                        Nuestro enfoque está en lograr la satisfacción total de nuestros clientes brindándoles el mejor
+                        servicio a nivel
+                        nacional. Aprovechamos la creatividad y la innovación constante para que nuestros
+                        productos brinden una gran satisfacción.
+                    </p>
+                </div>
+                <!-- MISIÓN Y VISIÓN -->
+                <div class="mision-vision">
+                    <div class="card-mv">
+                        <div class="icono-mv">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4>Misión</h4>
+                        <p>
+                            En Vidrios y Estructuras Arquitectónicas ALUA S.A.S., nos dedicamos al diseño y
+                            manufactura de materiales de alta calidad como el vidrio y el aluminio, innovando
+                            constantemente para la satisfacción de nuestros clientes.
+                        </p>
+                        <p class="valores">
+                            <strong>Valores:</strong> Agilidad, Liderazgo, Transparencia, Responsabilidad, Trabajo en
+                            Equipo.
+                        </p>
+                    </div>
+                    <div class="card-mv">
+                        <div class="icono-mv">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4>Visión</h4>
+                        <p>
+                            Para el 2030, buscamos ser una empresa reconocida a nivel
+                            nacional en cuanto a la comercialización de nuestros productos, mejorando
+                            continuamente para ayudar a las personas con las necesidades de su vida
+                            cotidiana.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================ 
+SECCIÓN SERVICIOS / PORTAFOLIO 
+============================================ -->
+            <section class="servicios" id="servicios">
+                <div class="contenedor">
+                    <p class="subtitulo">Áreas de Especialización</p>
+                    <h2 class="titulo-seccion">Nuestro Portafolio de Servicios</h2>
+                    <p class="descripcion-seccion">
+                        Ofrecemos asesoría integral en las principales ramas del Derecho Privado,
+                        con un enfoque personalizado y resultados efectivos.
+                    </p>
+                    <!-- TARJETAS DE SERVICIOS -->
+                    <div class="tarjetas-servicios">
+                        <!-- SERVICIO 1: VENTANERÍA Y FACHADAS -->
+                        <div class="tarjeta-servicio">
+                            <div class="servicio-icono">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Ventanería y Fachadas</h3>
+                            <p class="servicio-descripcion">
+                                Soluciones en vidrio y aluminio para exteriores que combinan estética y funcionalidad.
+                            </p>
+                            <div class="servicio-detalles">
+                                <h4>Nuestros Productos:</h4>
+                                <ul>
+                                    <li><strong>Ventanería en Aluminio:</strong> Diseños modernos y resistentes.</li>
+                                    <li><strong>Fachadas Flotantes:</strong> Elegancia y modernidad para edificaciones.
+                                    </li>
+                                    <li><strong>Mantenimiento:</strong> Reparación y ajustes de sistemas.</li>
+                                </ul>
+                            </div>
+                            <a href="https://wa.me/573125870901?text=Dame%20mas%20informaci%C3%B3n%20para%20cotizar%20ventaneria%20y%20fachadas"
+                                class="btn-servicio" target="_blank">Cotizar <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <!-- SERVICIO 2: INTERIORES -->
+                        <div class="tarjeta-servicio">
+                            <div class="servicio-icono">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <h3>Interiores</h3>
+                            <p class="servicio-descripcion">
+                                Transformamos espacios interiores con acabados de alta calidad y diseño.
+                            </p>
+                            <div class="servicio-detalles">
+                                <h4>Nuestros Productos:</h4>
+                                <ul>
+                                    <li><strong>Divisiones de Baño:</strong> Vidrio templado y accesorios de lujo.</li>
+                                    <li><strong>Puertas:</strong> Puertas de alta gama en vidrio y aluminio.</li>
+                                    <li><strong>Espejos:</strong> Diseños personalizados e instalación.</li>
+                                </ul>
+                            </div>
+                            <a href="https://wa.me/573125870901?text=Dame%20mas%20informaci%C3%B3n%20para%20cotizar%20interiores"
+                                class="btn-servicio" target="_blank">Cotizar <i class="fas fa-arrow-fight"></i></a>
+                        </div>
+                        <!-- SERVICIO 3: ESTRUCTURAS -->
+                        <div class="tarjeta-servicio">
+                            <div class="servicio-icono">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h3>Estructuras</h3>
+                            <p class="servicio-descripcion">
+                                Estructuras metálicas y arquitectónicas para diversos propósitos.
+                            </p>
+                            <div class="servicio-detalles">
+                                <h4>Nuestros Productos:</h4>
+                                <ul>
+                                    <li><strong>Marquesinas:</strong> Protección y estilo para áreas abiertas.</li>
+                                    <li><strong>Sistemas Acústicos:</strong> Soluciones para reducción de ruido.</li>
+                                    <li><strong>Acero Inoxidable:</strong> Barandas y estructuras duraderas.</li>
+                                </ul>
+                            </div>
+                            <a href="https://wa.me/573125870901?text=Dame%20mas%20informaci%C3%B3n%20para%20cotizar%20estructuras"
+                                class="btn-servicio" target="_blank">Cotizar <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <!-- SERVICIO 4: VIDRIOS ESPECIALIZADOS -->
+                        <div class="tarjeta-servicio">
+                            <div class="servicio-icono">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Vidrios Especializados</h3>
+                            <p class="servicio-descripcion">
+                                Vidrios de seguridad y especificaciones técnicas para proyectos exigentes.
+                            </p>
+                            <div class="servicio-detalles">
+                                <h4>Nuestros Productos:</h4>
+                                <ul>
+                                    <li><strong>Cristales Templados:</strong> Alta resistencia y seguridad.</li>
+                                    <li><strong>Laminados:</strong> Seguridad y protección UV.</li>
+                                    <li><strong>Blindados:</strong> Máxima protección y resistencia balística.</li>
+                                </ul>
+                            </div>
+                            <a href="https://wa.me/573125870901?text=Dame%20mas%20informaci%C3%B3n%20para%20cotizar%20vidrios%20especializados"
+                                class="btn-servicio" target="_blank">Cotizar <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ============================================ 
+SECCIÓN CONTACTO / FORMULARIO 
+============================================ -->
+            <section class="contacto" id="contacto">
+                <div class="contenedor">
+                    <p class="subtitulo">Estamos para Ayudarte</p>
+                    <h2 class="titulo-seccion">Contacto</h2>
+                    <div class="contacto-contenido">
+                        <!-- INFORMACIÓN DE CONTACTO -->
+                        <div class="contacto-info">
+                            <h3>Información de Contacto</h3>
+
+                            <!-- PERFIL DE CONTACTO -->
+                            <div class="perfil-contacto">
+                                <div class="perfil-img">
+                                    <img src="imagenes/FotoPerfilLaura.jpeg" alt="Laura Gonzales">
+                                </div>
+                                <div class="perfil-datos">
+                                    <h4>Laura Gonzales</h4>
+                                    <p class="cargo">Sales Manager Latam</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Celular</h4>
+                                    <p>312 587 0901</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Correo Electrónico</h4>
+                                    <p>vidriosalua@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Dirección</h4>
+                                    <p>Cra. 12b # 8b – 03, Mosquera, Cundinamarca</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Horario de Atención</h4>
+                                    <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                                    <p>Sábados: 9:00 AM - 1:00 PM</p>
+                                </div>
+                            </div>
+                            <!-- REDES SOCIALES -->
+                            <div class="redes-contacto">
+                                <h4>Síguenos en Redes</h4>
+                                <div class="redes-icons">
+                                    <a href="https://www.instagram.com/alua.sasofficial/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/aluasasofficial" target="_blank"><i
+                                            class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FORMULARIO DE CONTACTO -->
+                        <div class="formulario-contacto">
+                            <h3>Consulta Personalizada</h3>
+                            <p>Completa el formulario y nos pondremos en contacto en menos de 24 horas.</p>
+                            <form id="formContacto" action="https://formsubmit.co/cristiancano957@gmail.com"
+                                method="POST">
+                                <input type="hidden" name="_subject" value="Nueva Consulta Legal desde el Sitio Web">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="text" name="_honey" style="display:none">
+                                <!-- FILA 1: NOMBRE Y APELLIDO -->
+                                <div class="form-row">
+                                    <div class="form-grupo">
+                                        <label for="nombre">Nombre *</label>
+                                        <input type="text" id="nombre" name="nombre" required>
+                                        <div class="error-msg" id="errorNombre"></div>
+                                    </div>
+                                    <div class="form-grupo">
+                                        <label for="apellido">Apellido *</label>
+                                        <input type="text" id="apellido" name="apellido" required>
+                                        <div class="error-msg" id="errorApellido"></div>
+                                    </div>
+                                </div>
+
+                                <!-- FILA 2: DOCUMENTO Y CORREO -->
+                                <div class="form-row">
+                                    <div class="form-grupo">
+                                        <label for="cedula">Cédula/NIT *</label>
+                                        <input type="text" id="cedula" name="cedula" maxlength="10" inputmode="numeric"
+                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+                                            required>
+                                        <div class="error-msg" id="errorCedula"></div>
+                                    </div>
+                                    <div class="form-grupo">
+                                        <label for="email">Correo Electrónico *</label>
+                                        <input type="email" id="email" name="email" required>
+                                        <div class="error-msg" id="errorEmail"></div>
+                                    </div>
+                                </div>
+
+                                <!-- FILA 3: UBICACIÓN (PAÍS Y DEPARTAMENTO) -->
+                                <div class="form-row">
+                                    <div class="form-grupo">
+                                        <label for="pais">País *</label>
+                                        <input type="text" id="pais" name="pais" value="Colombia" readonly
+                                            style="background-color: #f8f9fa; color: #495057; cursor: default; border-color: #dee2e6;">
+                                    </div>
+                                    <div class="form-grupo">
+                                        <label for="departamento">Departamento *</label>
+                                        <select id="departamento" name="departamento" required>
+                                            <option value="">Seleccione...</option>
+                                            <!-- Se llena con JS -->
+                                        </select>
+                                        <div class="error-msg" id="errorDepartamento"></div>
+                                    </div>
+                                </div>
+
+                                <!-- FILA 4: CIUDAD Y SERVICIO -->
+                                <div class="form-row">
+                                    <div class="form-grupo">
+                                        <label for="ciudad">Ciudad/Municipio *</label>
+                                        <select id="ciudad" name="ciudad" required disabled>
+                                            <option value="">Seleccione Departamento primero</option>
+                                        </select>
+                                        <div class="error-msg" id="errorCiudad"></div>
+                                    </div>
+                                    <div class="form-grupo">
+                                        <label for="rama">Servicio de Interés *</label>
+                                        <select id="rama" name="rama" required>
+                                            <option value="">Seleccione...</option>
+                                            <option value="ventaneria">Ventanería y Fachadas</option>
+                                            <option value="interiores">Interiores y Vidrios</option>
+                                            <option value="estructuras">Estructuras Metálicas</option>
+                                            <option value="blindados">Vidrios Especializados</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                        <div class="error-msg" id="errorRama"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-grupo">
+                                    <label for="caso">Detalles del Proyecto *</label>
+                                    <textarea id="caso" name="caso" rows="3" maxlength="500" required></textarea>
+                                    <div class="contador-caracteres">
+                                        <span id="caracteresRestantes">500</span> caracteres restantes
+                                    </div>
+                                    <div class="error-msg" id="errorCaso"></div>
+                                </div>
+                                <button type="submit" class="btn btn-enviar">
+                                    <i class="fas fa-paper-plane"></i> Enviar Consulta
+                                </button>
+                                <div class="mensaje-exito" id="mensajeExito">
+                                    ¡Consulta enviada exitosamente! Nos contactaremos pronto.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ============================================ 
+FOOTER / PIE DE PÁGINA 
+============================================ -->
+            <footer class="footer">
+                <div class="contenedor">
+                    <div class="footer-contenido">
+                        <!-- LOGO FOOTER -->
+                        <div class="footer-logo">
+                            <div class="logo">
+                                <div class="logo-texto">
+                                    <h3>ALUA S.A.S.</h3>
+                                    <p>Estructuras Arquitectónicas, Vidrios y Aluminio</p>
+                                </div>
+                            </div>
+                            <p class="footer-descripcion">
+                                Garantizamos tranquilidad en la durabilidad de nuestros productos y seguridad de cumplir
+                                las normas vigentes.
+                            </p>
+                        </div>
+                        <!-- ENLACES RÁPIDOS -->
+                        <div class="footer-enlaces">
+                            <h4>Enlaces Rápidos</h4>
+                            <ul>
+                                <li><a href="#inicio">Inicio</a></li>
+                                <li><a href="#nosotros">Nosotros</a></li>
+                                <li><a href="#servicios">Servicios</a></li>
+                                <li><a href="#contacto">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <!-- SERVICIOS FOOTER -->
+                        <div class="footer-servicios">
+                            <h4>Nuestros Servicios</h4>
+                            <ul>
+                                <li><a href="#servicios">Ventanería y Fachadas</a></li>
+                                <li><a href="#servicios">Interiores</a></li>
+                                <li><a href="#servicios">Estructuras</a></li>
+                                <li><a href="#servicios">Vidrios Especializados</a></li>
+                            </ul>
+                        </div>
+                        <!-- CONTACTO FOOTER -->
+                        <div class="footer-contacto">
+                            <h4>Contacto</h4>
+                            <p><i class="fas fa-phone"></i> 312 587 0901</p>
+                            <p><i class="fas fa-envelope"></i> vidriosalua@gmail.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Cra. 12b # 8b – 03, Mosquera, Cundinamarca</p>
+                            <div class="footer-redes">
+                                <a href="https://www.instagram.com/alua.sasofficial/" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/aluasasofficial" target="_blank"><i
+                                        class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- COPYRIGHT -->
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 ALUA S.A.S. Todos los derechos reservados.</p>
+                        <p>Calidad, Innovación y Satisfacción.</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- ============================================ 
+SCRIPTS 
+============================================ -->
+            <script src="scripts.js"></script>
+</body>
+
+</html>
