@@ -1792,6 +1792,12 @@ RESPONSIVE ESPECÃFICO PARA FORMULARIO
     max-width: 100% !important;
 }
 
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 0 10px !important;
+    }
+}
+
 /* FIX 19: ESPECIAL PARA EMAILS MUY LARGOS */
 .info-item div[title*="@"] {
     overflow: visible !important;
@@ -2112,7 +2118,8 @@ footer li {
 }
 
 /* Responsive: Columna en mÃ³viles */
-@media (max-width: 600px) {
+/* Responsive: Columna en móviles y tablets */
+@media (max-width: 768px) {
     .form-row {
         flex-direction: column;
         gap: 0;
