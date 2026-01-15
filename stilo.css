@@ -967,7 +967,48 @@ RESPONSIVE - SE ADAPTA A CUALQUIER DISPOSITIVO
 }
 
 /* ============================================ 
-7. SECCIÃ“N CONTACTO 
+7. SECCIÓN CLIENTES 
+============================================ */
+.clientes {
+    background-color: var(--blanco);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.clientes-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.cliente-item {
+    width: 200px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transicion);
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.cliente-item:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.cliente-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ============================================ 
+8. SECCIÓN CONTACTO 
 ============================================ */
 .contacto {
     background: var(--gris-claro);
