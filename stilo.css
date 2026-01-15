@@ -885,7 +885,8 @@ RESPONSIVE - SE ADAPTA A CUALQUIER DISPOSITIVO
 }
 
 .tarjeta-servicio {
-    background: var(--blanco);
+    background: #f0f4f8;
+    /* Un tono azul grisáceo muy suave y elegante */
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 10px 30px var(--sombra);
