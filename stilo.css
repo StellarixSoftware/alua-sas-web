@@ -975,6 +975,12 @@ RESPONSIVE - SE ADAPTA A CUALQUIER DISPOSITIVO
     text-align: center;
 }
 
+.clientes .titulo-seccion {
+    font-size: 2rem;
+    /* Más pequeño que el estándar de 2.8rem */
+    margin-bottom: 30px;
+}
+
 .clientes-grid {
     display: flex;
     justify-content: center;
