@@ -84,4 +84,68 @@ document.addEventListener('DOMContentLoaded', function () {
             ciudadSelect.innerHTML = '<option value="">Seleccione Departamento primero</option>';
         }
     });
+
+    /* ============================================ 
+       LÓGICA DEL CARRUSEL 
+    ============================================ */
+    const slides = document.querySelectorAll('.slide');
+    const nextBtn = document.querySelector('.carrusel-btn.next');
+    const prevBtn = document.querySelector('.carrusel-btn.prev');
+    const indicadores = document.querySelectorAll('.indicador');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('activo'));
+        indicadores.forEach(dot => dot.classList.remove('activo'));
+
+        if (index >= slides.length) currentSlide = 0;
+        else if (index < 0) currentSlide = slides.length - 1;
+        else currentSlide = index;
+
+        slides[currentSlide].classList.add('activo');
+        indicadores[currentSlide].classList.add('activo');
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    function startAutoPlay() {
+        slideInterval = setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    }
+
+    function resetTimer() {
+        clearInterval(slideInterval);
+        startAutoPlay();
+    }
+
+    // Event Listeners
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetTimer();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetTimer();
+        });
+    }
+
+    indicadores.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            resetTimer();
+        });
+    });
+
+    // Iniciar si hay slides
+    if (slides.length > 0) {
+        startAutoPlay();
+    }
 });
