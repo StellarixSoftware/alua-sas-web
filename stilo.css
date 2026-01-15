@@ -601,9 +601,8 @@ section {
 }
 
 .perfil-img {
-    width: 60px;
-    /* Reducido de 80px para ser mÃ¡s "pequeÃ±o" */
-    height: 60px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--dorado-elegante);
