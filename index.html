@@ -406,6 +406,18 @@ SECCIÓN CONTACTO / FORMULARIO
                                     <p class="cargo">Sales Manager Latam</p>
                                 </div>
                             </div>
+
+                            <!-- NUEVO CONTACTO -->
+                            <div class="perfil-contacto" style="margin-top: 20px;">
+                                <div class="perfil-img">
+                                    <!-- Foto pendiente -->
+                                    <img src="https://via.placeholder.com/150" alt="Alvis Urzóla">
+                                </div>
+                                <div class="perfil-datos">
+                                    <h4>Alvis Urzóla</h4>
+                                    <p class="cargo">Sales Manager</p>
+                                </div>
+                            </div>
                             <div class="info-item">
                                 <i class="fas fa-phone"></i>
                                 <div>
@@ -487,8 +499,10 @@ SECCIÓN CONTACTO / FORMULARIO
                                 <div class="form-row">
                                     <div class="form-grupo" style="width: 100%;">
                                         <label for="telefono">Número Telefónico *</label>
-                                        <input type="tel" id="telefono" name="telefono" required
-                                            placeholder="Ej: 3XXX XXX XXXX">
+                                        <input type="tel" id="telefono" name="telefono" required maxlength="10"
+                                            inputmode="numeric"
+                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+                                            placeholder="Ej: 3001234567">
                                         <div class="error-msg" id="errorTelefono"></div>
                                     </div>
                                 </div>

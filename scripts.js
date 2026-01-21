@@ -169,6 +169,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const formData = new FormData(this);
 
+            // AGREGAR PREFIJO 57 AL TELÉFONO
+            const telefono = formData.get('telefono');
+            if (telefono && !telefono.startsWith('57')) {
+                formData.set('telefono', '57' + telefono);
+            }
+
             // 1. Enviar a Google Sheets
             const sheetsPromise = fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
