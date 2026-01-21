@@ -291,4 +291,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Función para seleccionar servicio desde los botones de "Cotizar"
+    window.seleccionarServicio = function (valor) {
+        const selectServicio = document.getElementById('servicio');
+        if (selectServicio) {
+            selectServicio.value = valor;
+
+            // Scroll suave hacia el formulario
+            const contactoSection = document.getElementById('contacto');
+            if (contactoSection) {
+                contactoSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
+
 });
