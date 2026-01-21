@@ -221,10 +221,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (modal) {
                         modal.style.display = 'flex'; // Mostrar modal
 
-                        // Cerrar automáticamente en 3 segundos
+                        // Cerrar automáticamente en 4 segundos
                         setTimeout(() => {
                             modal.style.display = 'none';
-                        }, 3000);
+                        }, 4000);
                     } else {
                         // Fallback por si acaso
                         alert("Tus datos han sido ingresados.");
