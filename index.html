@@ -329,6 +329,62 @@ SECCIÓN SERVICIOS / PORTAFOLIO
             </section>
 
             <!-- ============================================ 
+            SECCIÓN GALERÍA 
+            ============================================ -->
+            <section class="galeria" id="galeria">
+                <div class="contenedor">
+                    <p class="subtitulo">Nuestra Experiencia</p>
+                    <h2 class="titulo-seccion">Galería de Proyectos</h2>
+                    <p class="descripcion-seccion">
+                        Conoce algunos de nuestros trabajos más destacados en estructuras, vidrios y aluminio.
+                    </p>
+                    <div class="carousel-container">
+                        <div class="carousel-track" id="track">
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa1.jpeg" alt="Proyecto 1"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa2.jpeg" alt="Proyecto 2"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa3.jpeg" alt="Proyecto 3"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa4.jpeg" alt="Proyecto 4"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa5.jpeg" alt="Proyecto 5"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa6.jpeg" alt="Proyecto 6"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa7.jpeg" alt="Proyecto 7"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa8.jpeg" alt="Proyecto 8"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa9.jpeg" alt="Proyecto 9"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa10.jpeg" alt="Proyecto 10"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa11.jpeg" alt="Proyecto 11"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa12.jpeg" alt="Proyecto 12"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa13.jpeg" alt="Proyecto 13"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa14.jpeg" alt="Proyecto 14"
+                                    onclick="abrirLightbox(this)"></div>
+                            <div class="galeria-item"><img src="fotosNegocio/Empresa15.jpeg" alt="Proyecto 15"
+                                    onclick="abrirLightbox(this)"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="lightbox" onclick="cerrarLightbox(event)">
+                <span class="close-lightbox" onclick="cerrarLightbox(event)">&times;</span>
+                <img class="lightbox-content" id="img-lightbox">
+                <div class="lightbox-caption" id="caption-lightbox"></div>
+                <a class="prev" onclick="cambiarImagen(-1)">&#10094;</a>
+                <a class="next" onclick="cambiarImagen(1)">&#10095;</a>
+            </div>
+
+            <!-- ============================================ 
 SECCIÓN CONTACTO / FORMULARIO 
 ============================================ -->
             <section class="contacto" id="contacto">
@@ -394,8 +450,7 @@ SECCIÓN CONTACTO / FORMULARIO
                         <div class="formulario-contacto">
                             <h3>Consulta Personalizada</h3>
                             <p>Completa el formulario y nos pondremos en contacto en menos de 24 horas.</p>
-                            <form id="formContacto" action="https://formsubmit.co/cristiancano957@gmail.com"
-                                method="POST">
+                            <form id="formContacto" action="https://formsubmit.co/vidriosalua@gmail.com" method="POST">
                                 <input type="hidden" name="_subject" value="Nueva Consulta Legal desde el Sitio Web">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="text" name="_honey" style="display:none">

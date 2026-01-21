@@ -148,4 +148,121 @@ document.addEventListener('DOMContentLoaded', function () {
     if (slides.length > 0) {
         startAutoPlay();
     }
+
+    /* ============================================ 
+       LÓGICA DEL FORMULARIO (SHEETS + EMAIL) 
+    ============================================ */
+    const contactForm = document.getElementById('formContacto');
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxz-N6azOOwXrnUjPZxi5NMsrL3zMO_8p_ytAcTKEav5tT-tzmwXc0arvqPEa9U5ea8/exec';
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = this.querySelector('.btn-enviar');
+            const originalText = submitBtn.innerHTML;
+            const successMsg = document.getElementById('mensajeExito');
+
+            // UI Loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(this);
+
+            // 1. Enviar a Google Sheets
+            const sheetsPromise = fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Important for Google Apps Script
+            });
+
+            // 2. Enviar a FormSubmit (Email)
+            // Usamos la URL del action del formulario
+            const emailPromise = fetch(this.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            // Esperar a que ambos terminen (o al menos intentar)
+            Promise.all([sheetsPromise, emailPromise])
+                .then(() => {
+                    // Reset UI
+                    contactForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+
+                    // Mostrar mensaje éxito
+                    if (successMsg) {
+                        successMsg.style.display = 'block';
+                        setTimeout(() => {
+                            successMsg.style.display = 'none';
+                        }, 5000);
+                    }
+
+                    alert("¡Gracias! Tu consulta ha sido enviada exitosamente.");
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    alert("Hubo un error al enviar el formulario. Por favor intenta de nuevo.");
+                });
+        });
+    }
+
+    /* ============================================ 
+       LÓGICA DEL LIGHTBOX (GALERÍA) 
+    ============================================ */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('img-lightbox');
+
+    // CLONAR ITEMS PARA CARRUSEL INFINITO
+    const track = document.getElementById('track');
+    if (track) {
+        const items = track.innerHTML;
+        track.innerHTML += items; // Duplicar contenido
+    }
+
+    // Actualizar lista de imágenes (ahora incluye clonadas)
+    let galleryImages = document.querySelectorAll('.galeria-item img');
+    let currentIndex = 0;
+
+    window.abrirLightbox = function (img) {
+        lightbox.classList.add('activo');
+        lightboxImg.src = img.src;
+        // Encontrar índice actual
+        currentIndex = Array.from(galleryImages).indexOf(img);
+        document.body.style.overflow = 'hidden'; // Evitar scroll
+    }
+
+    window.cerrarLightbox = function (e) {
+        if (e.target === lightbox || e.target.classList.contains('close-lightbox')) {
+            lightbox.classList.remove('activo');
+            document.body.style.overflow = 'auto'; // Restaurar scroll
+        }
+    }
+
+    window.cambiarImagen = function (n) {
+        currentIndex += n;
+        if (currentIndex >= galleryImages.length) {
+            currentIndex = 0;
+        } else if (currentIndex < 0) {
+            currentIndex = galleryImages.length - 1;
+        }
+        lightboxImg.src = galleryImages[currentIndex].src;
+    }
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('activo')) {
+            lightbox.classList.remove('activo');
+            document.body.style.overflow = 'auto';
+        }
+        // Navegar con flechas
+        if (lightbox.classList.contains('activo')) {
+            if (e.key === 'ArrowLeft') cambiarImagen(-1);
+            if (e.key === 'ArrowRight') cambiarImagen(1);
+        }
+    });
+
 });
