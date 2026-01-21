@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         }, 5000);
                     }
 
-                    alert("¡Gracias! Tu consulta ha sido enviada exitosamente.");
+                    alert("Tus datos han sido ingresados. Nos pondremos en contacto contigo en los próximos 20 min.");
                 })
                 .catch(error => {
                     console.error('Error:', error);
